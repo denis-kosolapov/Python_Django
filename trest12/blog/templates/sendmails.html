@@ -1,0 +1,17 @@
+{% extends "admin/base_site.html" %}
+{% block content %}
+<h1>Это рассылка сообщений!</h1>
+<h3>При нажатии на кнопку отправки будет произведена рассылка.</h3>
+<h3>Рассылка сохранится после отправки</h3>
+    <form method="post">
+        {% csrf_token %}
+        <div class="col-md-12">
+            <input class="txt" type="text" name="subject" maxlength="120" required="" id="id_subject" placeholder="тема сообщения">
+        </div>
+        <div class="col-md-12">
+            <textarea class="txtarea" name="message" id="id_message" cols="50" rows="5" maxlength="1000"
+                                  id="id_description" placeholder="текст сообщения"></textarea>
+        </div>
+            <input type="submit" value="Отправить ссобщение пользователям" name="send">
+    </form>
+{% endblock %}
