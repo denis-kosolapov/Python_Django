@@ -1,0 +1,13 @@
+{% extends "blog/base.html" %}
+    {% block content %}
+        <h1>О компании</h1>
+        <p>hello</p>
+
+{% load flatpages %}
+{% get_flatpages as flatpages %}
+<ul>
+    {% for page in flatpages %}
+        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock content %}
