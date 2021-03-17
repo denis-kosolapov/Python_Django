@@ -1,0 +1,16 @@
+{% extends "blog/base.html" %}
+{% include "blog/home-page-elements/backBlock.html" %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            {{ flatpage.title }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            {{ flatpage.content }}
+        </div>
+    </div>
+</div>
+{% endblock content %}
