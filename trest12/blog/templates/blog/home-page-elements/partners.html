@@ -1,0 +1,80 @@
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+	<div class="row partners">
+		<div class="col-md-12 text-center">
+			<h4>Наши партнеры</h4>
+		</div>
+	</div>
+</div>
+<div class="container-fluid bottom_filter">
+	<div class="row partner">
+		<div class="right pointer" onclick="$('.bottom_filter .item_partner:last').insertBefore($('.bottom_filter .item_partner:first'));">
+			<img src="{% static 'blog/bootstrap-icons/arrow-right-square-fill.svg' %}" width="36">
+		</div>
+		<div class="col-md-3 item_partner">
+			<a href="https://www.amond.ru/">
+				<img class="partners-img" src="{% static 'blog/images/partners/amond.png' %}" alt="">
+			</a>
+		</div>
+		<div class="col-md-3 item_partner">
+			<a href="https://www.etm.ru/">
+				<img class="partners-img" src="{% static 'blog/images/partners/ETM-25_razvodyaschaya.png' %}" alt="">
+			</a>
+		</div>
+		<div class="col-md-3 item_partner">
+			<a href="https://eburg.kuvalda.ru/">
+				<img class="partners-img" src="{% static 'blog/images/partners/kuvaldaru.png' %}" alt="">
+			</a>
+		</div>
+		<div class="col-md-3 item_partner">
+			<a href="https://contrpro.ru/">
+				<img class="partners-img" src="{% static 'blog/images/partners/contrpro-project.png' %}" alt="">
+			</a>
+		</div>
+		<div class="col-md-3 item_partner">
+			<a href="https://svgk.ru/">
+				<img class="partners-img" src="{% static 'blog/images/partners/sgvk.png' %}" alt="">
+			</a>
+		</div>
+		<div class="col-md-3 item_partner">
+			<a href="http://integra63.ru/">
+				<img class="partners-img" src="{% static 'blog/images/partners/integra.jpg' %}" alt="">
+			</a>
+		</div>
+		<div class="col-md-3 item_partner">
+			<a href="http://kdpmk.narod.ru/">
+				<img class="partners-img" src="{% static 'blog/images/partners/kuibishevskoe dorojnoe_pmk.png' %}" alt="">
+			</a>
+		</div>
+		<div class="col-md-3 item_partner">
+			<a href="https://www.rosneft.ru/">
+				<img class="partners-img" src="{% static 'blog/images/partners/rosneft.png' %}" alt="">
+			</a>
+		</div>
+		<div class="col-md-3 item_partner">
+			<a href="http://stkrb.ru/">
+				<img class="partners-img" src="{% static 'blog/images/partners/srk.png' %}" alt="">
+			</a>
+		</div>
+		<div class="col-md-3 item_partner">
+			<a href="http://kpd63.ru/">
+				<img class="partners-img" src="{% static 'blog/images/partners/zavodkpd.png' %}" alt="">
+			</a>
+		</div>
+		<div class="col-md-3 item_partner">
+			<a href="http://sumr3.ru/">
+				<img class="partners-img" src="{% static 'blog/images/partners/specialnoe_mehanizirovanoe_upravlenie_rabot_3.png' %}" alt="">
+			</a>
+		</div>
+		<div class="col-md-3 item_partner">
+			<a href="https://silikat-12.pulscen.ru/">
+				<img class="partners-img" src="{% static 'blog/images/partners/silikat.png' %}" alt="">
+			</a>
+		</div>
+		<div class="left pointer" onclick="$('.bottom_filter .item_partner:first').insertAfter($('.bottom_filter .item_partner:last'));">
+			<img src="{% static 'blog/bootstrap-icons/arrow-left-square-fill.svg' %}" width="36">
+		</div>
+	</div>
+</div>
+{% endblock content %}

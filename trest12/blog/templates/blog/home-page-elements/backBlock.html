@@ -1,0 +1,73 @@
+{% load static %}
+{% block content %}
+<div class="container-fluid desktop">
+	<div class="backBlock">
+		<div class="row">
+			<div class="col-md-3 light">
+				<a href="{% url 'технический-надзор' %}">
+					<p>Технический надзор</p>
+					<img src="{% static '/blog/images/services/tex_nadzor.jpg' %}" class="preview">
+				</a>
+			</div>
+			<div class="col-md-3 dark">
+				<a href="{% url 'инженерные-изыскания' %}">
+					<p>Инженерные изыскания</p>
+					<img src="{% static 'blog/images/services/inzhenernye-izyskaniya.jpg' %}" class="preview">
+				</a>
+			</div>
+			<div class="col-md-3 light">
+				<a href="{% url 'обследование-зданий-и-сооружений' %}">
+					<p>Обследование зданий и сооружений</p>
+					<img src="{% static 'blog/images/services/tehnicheskoe-obsledovanie-zdanij-i-sooruzhenij.jpg' %}" class="preview">
+				</a>
+			</div>
+			<div class="col-md-3 dark">
+				<a href="{% url 'проектирование' %}">
+					<p>Проектирование</p>
+					<img src="{% static 'blog/images/services/proektirovanie.png' %}" class="preview">
+				</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 dark">
+				<a href="{% url 'строительно-техническая-экспертиза' %}">
+					<p>Строительно-техническая экспертиза</p>
+					<img src="{% static 'blog/images/services/stroitelnaya-ekspertiza.jpg' %} " class="preview">
+				</a>
+			</div>
+			<div class="col-md-3 light">
+				<a href="{% url 'аутсорсинг-пто' %}">
+					<p>Аутсорсинг ПТО</p>
+					<img src="{% static 'blog/images/services/autsorsing-pto.jpg' %} " class="preview">
+				</a>
+			</div>
+			<div class="col-md-3 dark">
+				<a href="{% url 'строительный-аудит' %}">
+					<p>Строительный аудит</p>
+					<img src="{% static 'blog/images/services/troi_audit.jpg' %} " class="preview">
+				</a>
+			</div>
+			<div class="col-md-3 light">
+				<a href="{% url 'составление-и-проверка-смет' %}">
+					<p>Составление и проверка смет</p>
+					<img src="{% static 'blog/images/services/sostavlenie-smet.jpg' %} " class="preview">
+				</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 light">
+				<a href="{% url 'пре-девелопмент-объектов-недвижимости' %}">
+					<p>Пре-девелопмент <br> объектов недвижимости</p>
+					<img src="{% static 'blog/images/services/pre-development-smrte.jpg' %} " class="preview">
+				</a>
+			</div>
+			<div class="col-md-3 dark">
+				<a href="{% url 'геодезическое-сопровождение' %}">
+					<p>Геодезическое <br> сопровождение</p>
+					<img src="{% static 'blog/images/services/geodez.jpg' %}" class="preview">
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock content %}
