@@ -1,0 +1,51 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+        <h3>Поиск по сайту</h3>
+        {% if object_list %}
+            {% for page in object_list %}
+                {% if page.url %}
+                    <p><a href="{{ page.url }}">{{ page.title }}</a></p>
+                    <p>{{ page.content }}</p>
+                {% endif %}
+            {% endfor %}
+
+            {% for post in object_list %}
+                {% if post.image %}
+                <p><a href="{% url 'post-detail' post.id %}">{{ post.title }}</a></p>
+                {{ post.title }} {{ post.content }}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            {% if object_list.has_previous %}
+                <a class="btn btn-outline-info mb-4" href="{{ last_question }}&page={{ 1 }}">First</a>
+                <a class="btn btn-outline-info mb-4" href="{{ last_question }}&page={{ object_list.previous_page_number }}">Previous</a>
+            {% endif %}
+
+            {% for num in object_list.paginator.page_range %}
+                {% if page_obj.number == num %}
+                  <a class="btn btn-info mb-4" href="{{ last_question }}&page={{ num }}">{{ num }}</a>
+                {% elif num > object_list.number|add:'-3' and num < object_list.number|add:'3' %}
+                  <a class="btn btn-outline-info mb-4" href="{{ last_question }}&page={{ num }}">{{ num }}</a>
+                {% endif %}
+            {% endfor %}
+
+            {% if object_list.has_next %}
+                <a class="btn btn-outline-info mb-4" href="{{ last_question }}&page={{ object_list.next_page_number }}">Next</a>
+                <a class="btn btn-outline-info mb-4" href="{{ last_question }}&page={{ object_list.paginator.num_pages }}">Last</a>
+            {% endif %}
+
+            {% else %}
+                <p>Не найдено публикаций по вашему запросу<br>Попробуйте повторить запрос с другой формулировкой</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock content %}

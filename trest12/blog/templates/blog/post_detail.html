@@ -1,0 +1,24 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h4 class="article-title">{{ object.date_posted|date:"d.m.Y" }} {{ object.title }}</h4>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <img src="/media/{{ object.image }}" class="image-news">
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            {{ object.content }}
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,38 @@
+<div class="container-fluid">
+    <div class="row contact">
+        <div class="col-md-12 text-center">
+            <a name="feedback">Обратная связь</a>
+            <div class="message">
+                {% for message in messages %}
+                <h5>{% if message.tags %}{% endif %}{{ message }}</h5>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="row contact-form">
+        <div class="col-md-12">
+            <div id="inline">
+                <form method="post" action="{% url 'contact-form' %}">
+                    {% csrf_token %}
+					<div class="col-md-12">
+						<input class="txt" type="text" name="name" maxlength="120" required="" id="id_name" placeholder="Имя">
+					</div>
+					<div class="col-md-12">
+	                    <input class="txt" type="email" name="email" maxlength="120" required="" id="id_email" placeholder="Email">
+					</div>
+					<div class="col-md-12">
+	                    <input class="txt" type="text" name="phone" maxlength="15" required="" id="id_phone" placeholder="Телефон">
+					</div>
+					<div class="col-md-12">
+	                    <textarea class="txtarea" name="description" cols="40" rows="5" maxlength="1000" id="id_description" placeholder="Тема звнока"></textarea>
+					</div>
+					<div class="col-md-12">
+						<p><input class="checkbox" type="checkbox" name="checkbox" required="" id="id_checkbox"> Я соглашаюсь с условиями <a href="">политики конфиденциальности</a>
+                    	</p>
+                    	<button type="submit" id="send">Отправить</button>
+					</div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<!--First variant -->
+
+<a name="feedback">Обратная связь</a>
+<form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">submit</button>
+</form>
+<div class="message">
+    {% for message in messages %}
+    <p>{% if message.tags %}{% endif %}{{ message }}</p>
+    {% endfor %}
+</div>
+
+
+<!--Second variant-->
+<a name="feedback">Обратная связь</a>
+<form method="post">
+    {% csrf_token %}
+    {{ form.name }}
+    {{ form.email }}
+    {{ form.phone }}
+    {{ form.description }}
+    <button type="submit">submit</button>
+</form>
+<div class="message">
+    {% for message in messages %}
+    <p>{% if message.tags %}{% endif %}{{ message }}</p>
+    {% endfor %}
+</div>

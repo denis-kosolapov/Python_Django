@@ -1,0 +1,32 @@
+{% load static %}
+{% block content %}
+<div class="container-fluid desktop">
+	<div class="row footer">
+		<div class="col-md-6">
+			<a href=""><img src="{% static 'blog/images/social/fb.png' %}" width="30"></a>
+			<a href=""><img src="{% static 'blog/images/social/ins.png' %}" width="30"></a>
+			<a href=""><img src="{% static 'blog/images/social/vk.png' %}" width="30"></a>
+			<a href=""><img src="{% static 'blog/images/social/tw.png' %}" width="30"></a>
+		</div>
+		<div class="col-md-6">
+			{% include "blog/form.html" %}
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid mobile">
+	<div class="row">
+		<div class="col-md-6">
+			{% include "blog/form.html" %}
+		</div>
+		<div class="col-md-6">
+			<a href=""><img src="{% static 'blog/images/social/fb.png' %}" width="30"></a>
+			<a href=""><img src="{% static 'blog/images/social/ins.png' %}" width="30"></a>
+			<a href=""><img src="{% static 'blog/images/social/vk.png' %}" width="30"></a>
+			<a href=""><img src="{% static 'blog/images/social/tw.png' %}" width="30"></a>
+			<br><br><br>
+		</div>
+	</div>
+</div>
+
+{% endblock content %}

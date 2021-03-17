@@ -1,0 +1,63 @@
+{% load static %}
+{% block content %}
+	<div class="container-fluid">
+		<div class="row header">
+			<div class="col-md-4 logotype">
+				<a href="{% url 'blog-home' %}"><h1>трест 12</h1></a>
+			</div>
+			<div class="col-md-4 text-center">
+				<h6>Компания «Трест 12» основана в 1997 году</h6>
+				<h6><img src="{% static 'blog/bootstrap-icons/flag.svg' %}" width="24"> г.Самара, ул. Скляренко 26, офис 9010</h6>
+			</div>
+			<div class="col-md-4 text-center">
+				<h6>
+					<a href="tel:88463131678">
+					<img src="{% static 'blog/bootstrap-icons/tablet.svg' %}" width="24"></a>
+					8 (846) 313-16-78
+				</h6>
+				<h6>
+					<a href="mailto:trest12_1@mail.ru"><img src="{% static 'blog/bootstrap-icons/envelope.svg' %}" width="24"></a>
+					info@трест12.рф
+				</h6>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12 navbar-row">
+				<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+				<h6>МЕНЮ</h6>
+				</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav mr-auto">
+							<li class="nav-item">
+								<a class="nav-link" href="{% url 'о-компании' %}">О компании</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link dropdown-toggle services" href="{% url 'услуги' %}" role="button" aria-haspopup="true" aria-expanded="false">услуги</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="{% url 'цены' %}">цены</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="{% url 'новости' %}">Новости</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="{% url 'отзывы' %}">отзывы</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="{% url 'контакты' %}">Контакты</a>
+							</li>
+						</ul>
+						<form class="form-inline my-2 my-lg-0" action="{% url 'search_results' %}" method="get">
+						  	<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="q">
+						  	<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+						</form>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+{% endblock content %}
